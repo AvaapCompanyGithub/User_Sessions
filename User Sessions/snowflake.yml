@@ -1,0 +1,19 @@
+definition_version: 2
+entities:
+  streamlit_app:
+    type: streamlit
+    identifier:
+      database: UTIL_DB
+      schema: REPORTS
+      name: USER_SESSIONS
+    title: User Sessions
+    query_warehouse: REPORTS_WH
+    compute_pool: SYSTEM_COMPUTE_POOL_CPU
+    run_mode: SpcsOnly
+    execute_as: OWNER
+    main_file: user_sessions.py
+    artifacts:
+      - pyproject.toml
+      - user_sessions.py
+      - .streamlit/config.toml
+    idle_auto_shutdown_time_seconds: 86400
