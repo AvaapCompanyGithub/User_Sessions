@@ -4,7 +4,7 @@ entities:
     type: streamlit
     identifier:
       database: UTIL_DB
-      schema: REPORTS
+      schema: STREAMLIT
       name: USER_SESSIONS
     title: User Sessions
     query_warehouse: REPORTS_WH
@@ -17,3 +17,6 @@ entities:
       - user_sessions.py
       - .streamlit/config.toml
     idle_auto_shutdown_time_seconds: 86400
+    sharing:
+      - role: SYSADMIN
+        with_grant_option: true
