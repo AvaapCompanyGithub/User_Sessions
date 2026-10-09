@@ -356,7 +356,7 @@ with range_col:
         unsafe_allow_html=True,
     )
 
-st.markdown("---")
+st.divider()
 
 # ACCOUNT_USAGE ranges are half-open; end bound is exclusive.
 p_start = start_date.strftime("%Y-%m-%d")
@@ -660,7 +660,7 @@ else:
         },
     )
 
-st.markdown("---")
+st.divider()
 
 # ----------------------------------------------------------------------
 # Query History
@@ -739,12 +739,11 @@ else:
 # Notes
 # ----------------------------------------------------------------------
 
-st.markdown("---")
+st.divider()
 
 st.markdown(
     f"""
     <div class="note">
-    Change the date range in the header to filter both login and query activity.
     ACCOUNT_USAGE views are not real time. LOGIN_HISTORY and QUERY_HISTORY
     typically lag by up to a few hours, so ranges that include today or yesterday
     will understate actual activity, and the most recent day is always partial.<br><br>
